@@ -1,0 +1,4 @@
+baseURL = "http://nabu-codex/hugo-patches/"
+languageCode = "en-us"
+title = "Hugo Patches"
+theme = "brian-temple"
