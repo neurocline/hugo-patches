@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xl="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="62.5 419.5 767 312" width="767" height="312">
+  <defs>
+    <font-face font-family="Arial" font-size="16" panose-1="2 11 6 4 2 2 2 2 2 4" units-per-em="1000" underline-position="-105.95703" underline-thickness="73.24219" slope="0" x-height="518.5547" cap-height="716.3086" ascent="905.2734" descent="-211.91406" font-weight="400">
+      <font-face-src>
+        <font-face-name name="ArialMT"/>
+      </font-face-src>
+    </font-face>
+    <marker orient="auto" overflow="visible" markerUnits="strokeWidth" id="FilledArrow_Marker" stroke-linejoin="miter" stroke-miterlimit="10" viewBox="-1 -4 10 8" markerWidth="10" markerHeight="8" color="black">
+      <g>
+        <path d="M 8 0 L 0 -3 L 0 3 Z" fill="currentColor" stroke="currentColor" stroke-width="1"/>
+      </g>
+    </marker>
+    <marker orient="auto" overflow="visible" markerUnits="strokeWidth" id="FilledArrow_Marker_2" stroke-linejoin="miter" stroke-miterlimit="10" viewBox="-1 -4 10 8" markerWidth="10" markerHeight="8" color="black">
+      <g>
+        <path d="M 8 0 L 0 -3 L 0 3 Z" fill="currentColor" stroke="currentColor" stroke-width="1"/>
+      </g>
+    </marker>
+  </defs>
+  <metadata> Produced by OmniGraffle 7.10.1 
+    <dc:date>2019-03-08 23:43:43 +0000</dc:date>
+  </metadata>
+  <g id="Canvas_1" fill="none" fill-opacity="1" stroke-dasharray="none" stroke="none" stroke-opacity="1">
+    <title>Canvas 1</title>
+    <rect fill="white" x="62.5" y="419.5" width="767" height="312"/>
+    <g id="Canvas_1: Layer 1">
+      <title>Layer 1</title>
+      <g id="Graphic_27">
+        <rect x="63" y="420" width="766" height="311" fill="white"/>
+        <path d="M 63 420 L 829 420 L 829 731 L 63 731 Z" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4.0,4.0" stroke-width="1"/>
+        <text transform="translate(68 707)" fill="black">
+          <tspan font-family="Arial" font-size="16" font-weight="400" fill="black" x="292.03906" y="14">Hugo - unified URL form</tspan>
+        </text>
+      </g>
+      <g id="Graphic_28">
+        <rect x="631" y="481" width="166" height="216" fill="white"/>
+        <rect x="631" y="481" width="166" height="216" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(636 486)" fill="black">
+          <tspan font-family="Arial" font-size="16" font-weight="400" fill="black" x="27.746094" y="14">Generated file</tspan>
+        </text>
+      </g>
+      <g id="Graphic_29">
+        <rect x="98" y="447" width="131" height="75" fill="#c0ffc0"/>
+        <rect x="98" y="447" width="131" height="75" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(103 466.97656)" fill="black">
+          <tspan font-family="Arial" font-size="16" font-weight="400" fill="black" x="23.597656" y="14">Markdown </tspan>
+          <tspan font-family="Arial" font-size="16" font-weight="400" fill="black" x="34.257812" y="31.523438">content</tspan>
+        </text>
+      </g>
+      <g id="Graphic_30">
+        <rect x="267" y="459.5" width="115" height="50" fill="white"/>
+        <rect x="267" y="459.5" width="115" height="50" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(272 466.97656)" fill="black">
+          <tspan font-family="Arial" font-size="16" font-weight="400" fill="black" x="15.597656" y="14">Markdown </tspan>
+          <tspan font-family="Arial" font-size="16" font-weight="400" fill="black" x="22.26172" y="31.523438">renderer</tspan>
+        </text>
+      </g>
+      <g id="Line_31">
+        <line x1="229" y1="484.5" x2="257.1" y2="484.5" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_32">
+        <rect x="98" y="564" width="131" height="50" fill="#c0ffff"/>
+        <rect x="98" y="564" width="131" height="50" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(103 579.5)" fill="black">
+          <tspan font-family="Arial" font-size="16" font-weight="400" fill="black" x="14.703125" y="14">Layout file(s)</tspan>
+        </text>
+      </g>
+      <g id="Graphic_33">
+        <rect x="457" y="564" width="115" height="50" fill="white"/>
+        <rect x="457" y="564" width="115" height="50" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(462 571.47656)" fill="black">
+          <tspan font-family="Arial" font-size="16" font-weight="400" fill="black" x="20.039062" y="14">Template </tspan>
+          <tspan font-family="Arial" font-size="16" font-weight="400" fill="black" x="28.476562" y="31.523438">engine</tspan>
+        </text>
+      </g>
+      <g id="Line_34">
+        <line x1="229" y1="589" x2="447.1" y2="589" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Line_35">
+        <line x1="465.4306" y1="509.5" x2="493.8696" y2="555.5755" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_36">
+        <rect x="648.5" y="559.5" width="131" height="75" fill="#c0ffc0"/>
+        <rect x="648.5" y="559.5" width="131" height="75" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(653.5 579.47656)" fill="black">
+          <tspan font-family="Arial" font-size="16" font-weight="400" fill="black" x="39.01953" y="14">HTML </tspan>
+          <tspan font-family="Arial" font-size="16" font-weight="400" fill="black" x="18.269531" y="31.523438">(Markdown)</tspan>
+        </text>
+      </g>
+      <g id="Graphic_37">
+        <rect x="648.5" y="509.5" width="131" height="50" fill="#c0ffff"/>
+        <rect x="648.5" y="509.5" width="131" height="50" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(653.5 525)" fill="black">
+          <tspan font-family="Arial" font-size="16" font-weight="400" fill="black" x="10.121094" y="14">HTML (layout)</tspan>
+        </text>
+      </g>
+      <g id="Graphic_38">
+        <rect x="648.5" y="634.5" width="131" height="50" fill="#c0ffff"/>
+        <rect x="648.5" y="634.5" width="131" height="50" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(653.5 650)" fill="black">
+          <tspan font-family="Arial" font-size="16" font-weight="400" fill="black" x="12.785156" y="14">HTML (layout</tspan>
+        </text>
+      </g>
+      <g id="Line_39">
+        <line x1="572" y1="589" x2="621.1" y2="589" marker-end="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+      <g id="Graphic_40">
+        <rect x="409" y="459.5" width="82" height="50" fill="white"/>
+        <rect x="409" y="459.5" width="82" height="50" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <text transform="translate(414 475)" fill="black">
+          <tspan font-family="Arial" font-size="16" font-weight="400" fill="black" x="5.7734375" y="14">fix URLs</tspan>
+        </text>
+      </g>
+      <g id="Line_41">
+        <line x1="382" y1="484.5" x2="399.1" y2="484.5" marker-end="url(#FilledArrow_Marker_2)" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -4,6 +4,7 @@
 # Go source files always have LF line endings
 *.go text eol=lf
 go.mod text eol=lf
+go.sum text eol=lf
 
 # SVG files always have LF line endings
 *.svg text eol=lf

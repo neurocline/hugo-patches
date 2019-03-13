@@ -1,6 +1,17 @@
 ---
-title: "Patch: Date/time only shown in file logs"
+title: "Patch: No date/time in console output (TBD)"
 date: 2019-03-07T12:09:15-08:00
+---
+
+This patch isn't possible with jwalterweatherman as the logger, due to how jww
+works - there is a single logger for each log level and a tee function that
+sends the same message to both console and file (or discards in the case
+that a log threshold isn't satisfied), so there is no way to have different
+flags or prefixes.
+
+This is a note to remind a future self to replace the logging code in Hugo
+with something a little more flexible.
+
 ---
 
 This patch is separated from the other "reduce output length" patch because this

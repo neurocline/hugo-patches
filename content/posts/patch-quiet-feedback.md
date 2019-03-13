@@ -3,6 +3,9 @@ title: "Patch: Quiet Feedback"
 date: 2019-03-06T22:34:01-08:00
 ---
 
+This patch makes `--quiet` actually be quiet by supressing output
+to the FEEDBACK logger. This requires a new version of jWalterWeatherman.
+
 ## Change --quiet to also suppress FEEDBACK loggers
 
 Hugo doesn't really have a quiet mode - even without verbose logging, there's
@@ -24,9 +27,9 @@ a check against `--quiet`; this is error-prone and invasive. Instead, we
 add a `SetQuiet` method to the `common/loggers` package, which enables or
 disables the FEEDBACK loggers in jwalterweatherman.
 
-See [hugo commit 1e53050aa7][] for the full details.
+See [hugo commit eb0132b487][] for the full details.
 
-[hugo commit 1e53050aa7]: https://github.com/neurocline/hugo/commit/1e53050aa750cf9f4fb0136aa1b2a4c412772d8f
+[hugo commit eb0132b487]: https://github.com/neurocline/hugo/commit/eb0132b48787e25e1081c0189beda5ea5f00c318
 
 ## jwalterweatherman: Add control of FEEDBACK loggers
 
@@ -47,3 +50,9 @@ adds a new API call and the default behavior is as before.
 Bikeshedding on the API used to enable/disable the FEEDBACK logger is welcome.
 
 See [jww commit 325f63e917][] for the full details.
+
+## tests
+
+Ran `go test ./...`. All tests passed.
+
+Modified files had `gofmt -w` run on them.

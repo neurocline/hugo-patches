@@ -3,6 +3,12 @@ title: "Patch: Verbose Levels"
 date: 2019-03-06T23:04:13-08:00
 ---
 
+This patch extends the control the user has over verbose logging.
+
+See [hugo commit 507d08c60c][] for details.
+
+[hugo commit 507d08c60c]: https://github.com/neurocline/hugo/commit/507d08c60c36543ec5a65a28b7db9a04ec3da2bd
+
 ## Add log levels to --verbose and --log
 
 Hugo uses jwalterweatherman and has a fair amount of logging controlled by different
@@ -69,6 +75,8 @@ The non-deprecated set of options is this:
 Everything can be accomplished with just these options. The others will be maintained for backwards
 compatibility but deprecated.
 
-See [hugo commit e0f974139e][] for details.
+## tests
 
-[hugo commit e0f974139e]: https://github.com/neurocline/hugo/commit/e0f974139e4d01b00e60ff76547fbf24016b4d6e
+Ran `go test ./...`. All tests passed.
+
+Modified files had `gofmt -w` run on them.

@@ -3,6 +3,8 @@ title: "Patch: Cleaner Output"
 date: 2019-03-07T11:48:44-08:00
 ---
 
+This patch streamlines some of the verbose Hugo console output.
+
 The default Hugo output is overly verbose for certain kinds of messages and errors.
 Fixing this is complicated by the fact that a single log print message can go
 to both console and logfile and be filtered at different levels for console and logfile.
@@ -22,9 +24,9 @@ that will be addressed at some point. For example, maybe each operation shows an
 ID in the log message. For this reason, the DEBUG/TRACE messages repeat information from
 the WARN/INFO message. A future change to the logging system could remove the need for this.
 
-See [hugo commit 56cf4436d6][] for the full diff.
+See [hugo commit 3af4e13c05][] for the full diff.
 
-[hugo commit 56cf4436d6]: https://github.com/neurocline/hugo/commit/56cf4436d6749a199000c478c9f724f1873765bd
+[hugo commit 3af4e13c05]: https://github.com/neurocline/hugo/commit/3af4e13c0575c66ac1eeafa7a1b856ed2a834f70
 
 ## reduce verbosity for missing layouts
 
@@ -86,8 +88,6 @@ I have a `hugo check` command in mind that would help to that end.
 
 ## tests
 
-No tests needed changing. All tests were run with `go test ./...` from the root of the Hugo directory.
-
-## gofmt
+All tests were run with `go test ./...` from the root of the Hugo directory.
 
 The `gofmt` tool was used on all modified files.

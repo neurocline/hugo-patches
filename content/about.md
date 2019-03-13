@@ -10,21 +10,24 @@ need more than just a commit message.
 I am maintaining an [enhanced version of Hugo][] until these patches are
 accepted. It contains the following patches:
 
+- [LF line endings]({{< relref "patch-lf-go-mod.md" >}}) (branch: [patch-lf-go-mod][])
 - [Quiet Feedback]({{< relref "patch-quiet-feedback.md" >}}) (branch: [patch-quiet-feedback][])
-- [Verbose Levels]({{< relref "patch-verbose-levels.md" >}}) (branch: [patch-verbose-levels-enhanced][])
+- [Verbose Levels]({{< relref "patch-verbose-levels.md" >}}) (branch: [patch-verbose-levels][])
 - [Cleaner Output]({{< relref "patch-shorter-output.md" >}}) (branch: [patch-cleaner-output][])
-- static files performance (branch: [patch-static-files-perf][])
-- limit num workers (branch: [patch-num-workers][])
-- fix path generation (branch: [patch-paths-fix][])
+- [Static Files Perf]({{< relref "patch-static-file-perf.md" >}}) (branch: [patch-static-files-perf][])
+- [Limit num workers]({{< relref "patch-num-workers.md" >}}) (branch: [patch-num-workers][])
+- [Fix path-absolute-URLs]({{< relref "patch-path-abs-url.md" >}}) (branch: [patch-path-abs-url][])
+- fix path-relative-URLs
 
-[enhanced version of Hugo]: https://github.com/neurocline/hugo/commit/baa858e8f77fdfe6080d6f11820602e5f9ae2086
+[enhanced version of Hugo]: https://github.com/neurocline/hugo/tree/hugo-enhanced
 
-[patch-quiet-feedback]: https://github.com/neurocline/hugo/commit/1e53050aa750cf9f4fb0136aa1b2a4c412772d8f
-[patch-verbose-levels-enhanced]: https://github.com/neurocline/hugo/commit/e0f974139e4d01b00e60ff76547fbf24016b4d6e
-[patch-cleaner-output]: https://github.com/neurocline/hugo/commit/56cf4436d6749a199000c478c9f724f1873765bd
-[patch-static-files-perf]: https://github.com/neurocline/hugo/commit/e42b84528093d1110094ce45c3f3b0b03ca10bba
-[patch-num-workers]: https://github.com/neurocline/hugo/commit/7fa800cf63c2d586fe4c5a6f5c7aa3d7696f2405
-[patch-paths-fix]: https://github.com/neurocline/hugo/commit/206199a5db88f3936f05e66aa4d7c12ccd383562
+[patch-lf-go-mod]: https://github.com/neurocline/hugo/commit/4a6a6b78f2e9306127fd6685288cb6ad08777bcd
+[patch-quiet-feedback]: https://github.com/neurocline/hugo/commit/eb0132b48787e25e1081c0189beda5ea5f00c318
+[patch-verbose-levels]: https://github.com/neurocline/hugo/commit/507d08c60c36543ec5a65a28b7db9a04ec3da2bd
+[patch-cleaner-output]: https://github.com/neurocline/hugo/commit/3af4e13c0575c66ac1eeafa7a1b856ed2a834f70
+[patch-static-files-perf]: https://github.com/neurocline/hugo/commit/d2be6f785f2531b49ee6a1474e2ad9d7489e4514
+[patch-num-workers]: https://github.com/neurocline/hugo/commit/dedeab73f8d52425702260eba6e83fd303991d36
+[patch-path-abs-url]: https://github.com/neurocline/hugo/commit/98f58ec5a147679e8b36de7d7d15adac33f022a2
 
 Not all of these patches have been submitted to the Hugo team yet. When patches are accepted,
 I'll note that.
@@ -40,12 +43,13 @@ branch is merging in a set of patches.
 
 ```
 $ git checkout -b hugo-enhanced master
+$ git merge --no-ff patch-lf-go-mod
 $ git merge --no-ff patch-quiet-feedback
-$ git merge --no-ff patch-verbose-levels-enhanced
+$ git merge --no-ff patch-verbose-levels
 $ git merge --no-ff patch-cleaner-output
 $ git merge --no-ff patch-static-files-perf
 $ git merge --no-ff patch-num-workers
-$ git merge --no-ff patch-paths-fix
+$ git merge --no-ff patch-path-abs-url
 ```
 
 ### Windows
@@ -58,7 +62,7 @@ of error handling.
 git checkout -b hugo-enhanced master
 if %errorlevel% neq 0 goto :FATAL
 
-for %%G in (patch-quiet-feedback,patch-verbose-levels-enhanced,patch-cleaner-output,patch-static-files-perf,patch-num-workers,patch-paths-fix) do (
+for %%G in (patch-lf-go-mod,patch-quiet-feedback,patch-verbose-levels,patch-cleaner-output,patch-static-files-perf,patch-num-workers,patch-path-abs-url) do (
   echo:
   echo merging %%G
   git merge --no-ff %%G
@@ -70,6 +74,27 @@ exit /B 0
 echo Error %errorlevel%
 ```
 
+How annoying. I've made a merge conflict. It shouldn't be a merge conflict, two patches
+introduce distinct changes, but it looks like a merge conflict to Git, because I'm changing
+what appears to be the same line.
+
 ### Linux/Mac
 
 Write bash script to do the same.
+
+## Rebasing the patches
+
+Before submitting patches, they need to be rebased on the most current `master`.
+
+```
+$ git fetch origin
+$ git checkout master
+$ git merge --ff-only origin/master
+$ git rebase patch-lf-go-mod master
+$ git rebase patch-quiet-feedback master
+$ git rebase patch-verbose-levels master
+$ git rebase patch-cleaner-output master
+$ git rebase patch-static-files-perf master
+$ git rebase patch-num-workers master
+$ git rebase patch-paths-fix master
+```
